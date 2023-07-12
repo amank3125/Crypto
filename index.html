@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Tracker</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body onload="getPrice()">
+    <div class="container">
+        <img id="coin" class="ticker1-img" width="48px" height="48px" src="https://s2.coinmarketcap.com/static/img/coins/64x64/1.png"></img><img id="coin" class="ticker2-img" width="48px" height="48px" src="https://s2.coinmarketcap.com/static/cloud/img/fiat-flags/USD.svg"></img>
+        <p><span class="price"></span></p>
+        <select class="ticker1" onchange="getPrice()" id="design">
+            <option selected>BTC</option>
+            <option>ETH</option>
+            <option>BNB</option>
+            <option>ARB</option>
+            <option>CAKE</option>
+        </select>
+        <select class="ticker2" onchange="getPrice()" id="design">
+            <option>USD</option>
+            <option>EUR</option>
+            <option>INR</option>
+        </select>
+        <!-- <input type="number" value="2" min="0" max="5" class="decimals" id="design" onmouseup="getPrice()"> -->
+        <!-- <img height="22" src="img/coins/png/003-bitcoin.png"></img> -->
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

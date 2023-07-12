@@ -1,0 +1,52 @@
+div.container {
+    /* background-color: aqua; */
+    background-image: linear-gradient(230deg, yellow, #adff2f);
+    /* display: inline; */
+    width: 300px;
+    height: 150px;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: 500;
+    text-align: center;
+}
+
+
+#design {
+    border: none;
+    border-radius: 5px;
+    width:80px;
+    height: 30px;
+    text-align: center;
+    transition: 0.2s ease-in-out;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#design:hover {
+    box-shadow: 0px 5px 10px rgba(0, 179, 255, 0.25);
+}
+#design:focus {
+    outline: none;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+}
+/* .ticker1 option {
+    background-image: url('/img/coins/png/003-bitcoin.png');
+} */
+.price {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+}
+#coin{
+    transition: 0.3s ease-in-out;
+    border-radius: 50%;
+    vertical-align: top;
+    top: 5px;
+    margin: 4px;
+
+}
+
+#coin:hover {
+    transform: rotateY(360deg);
+    box-shadow: 0px 5px 10px rgba(0, 179, 255, 0.4);
+}
