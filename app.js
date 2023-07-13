@@ -31,7 +31,6 @@ let method = 'coinapi';
                           fetch(url)
                           .then((response) => response.json())
                           .then((json) => display.innerHTML = `The current price of ${coinName1} is ${json.rate.toFixed(2)} ${coinName2}`);
-                          console.log(url)
       }
 /*alphavantage method*/   else if (method=='alphavantage'){
                           url = `${apiURL.alphavantage}${coinName1}&to_currency=${coinName2}&apikey=${apiKey.alphavantage}`
