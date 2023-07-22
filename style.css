@@ -9,6 +9,11 @@ div.container {
     font-weight: 500;
     text-align: center;
 }
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 
 #design {
