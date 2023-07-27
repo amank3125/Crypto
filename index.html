@@ -10,6 +10,12 @@
 </head>
 <body onload="getPrice()">
     <div class="main">
+        <div class="theme">
+            <label>
+                <input class="switch-btn" type="checkbox" onchange="theme()">
+                <span class="slider"></span>
+            </label>
+        </div>
     <div class="container">
         <img id="coin" class="ticker1-img" width="48px" height="48px" src="https://s2.coinmarketcap.com/static/img/coins/64x64/1.png"></img><img id="coin" class="ticker2-img" width="48px" height="48px" src="https://s2.coinmarketcap.com/static/cloud/img/fiat-flags/USD.svg"></img>
         <p><span class="price"></span></p>
