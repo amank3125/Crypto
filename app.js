@@ -14,9 +14,12 @@ let display = document.querySelector('.price');
 let ticker1 = document.querySelector('.ticker1');
 let ticker2 = document.querySelector('.ticker2');
 let decimals = document.querySelector('.decimals');
-let price = 0;
+let switchBtn = document.querySelector('.switch-btn');
 let ticker1Image = document.querySelector('.ticker1-img');
 let ticker2Image = document.querySelector('.ticker2-img');
+let background = document.querySelector('.main');
+let price = 0;
+let currentTheme = 'dark';
 let method = 'coinapi';
 
   function getPrice(){
@@ -76,7 +79,7 @@ ticker2Image.src = src2;
  
 
 
-    //call API and fetch price from above constructed URL
+    //call API and fetch price from above-constructed URL
     // if ($('.decimals').val()<=0){
     //   alert('Value cannot be less than 0!')
     //   decimals.value = 0;
@@ -89,3 +92,14 @@ ticker2Image.src = src2;
     // }
     //display demo price to reduce API calls
     display.innerHTML = `The current price of ${ticker1.value} is 0 ${ticker2.value}`
+
+    function theme(){
+        if(currentTheme=="light"){
+          background.style = "background-image:radial-gradient(var(--dark),black);";
+          currentTheme = "dark";
+          
+        } else if (currentTheme=="dark"){
+          background.style = "background-image:radial-gradient(white,grey);";
+          currentTheme = "light";
+        }
+    }
