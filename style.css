@@ -1,3 +1,13 @@
+:root {
+    --light: #d8dbe0;
+    --dark: #28292c;
+    --link: rgb(27, 129, 112);
+    --link-hover: rgb(24, 94, 82);
+  }
+body {
+    margin: 0;
+    padding: 0;
+}
 div.container {
     /* background-color: aqua; */
     background-image: linear-gradient(230deg, yellow, #adff2f);
@@ -13,8 +23,10 @@ div.container {
     display: flex;
     align-items: center;
     justify-content: center;
-    height:98vh;
-    width:98vw;
+    height:100vh;
+    width:100vw;
+    background-image: radial-gradient(var(--dark),black);
+    transition: 1s all ease-in-out;
 }
 
 
@@ -57,3 +69,56 @@ input::-webkit-inner-spin-button{
     transform: rotateY(360deg);
     box-shadow: 0px 5px 10px rgba(0, 179, 255, 0.4);
 }
+
+.theme {
+    display: block;
+    width: 150px;
+}
+  
+label {
+    box-shadow: 0px 0px 20px #d8dbe074;
+    border: 2px white solid;
+    position: absolute;
+    width: 50px;
+    height: 20px;
+    top: 20px;
+    right: 50px;
+    background-color: var(--dark);
+    border-radius: 50px;
+    cursor: pointer;
+  }
+  
+input {
+    position: absolute;
+    display: none;
+  }
+  
+.slider {
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    border-radius: 50px;
+    transition: 0.3s;
+  }
+  
+input:checked ~ .slider {
+    background-color: var(--light);
+  }
+  
+.slider::before {
+    content: "";
+    position: inherit;
+
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    box-shadow: inset 28px -4px 0px 0px var(--light);
+    background-color: var(--dark);
+    transition: 0.3s;
+  }
+  
+  input:checked ~ .slider::before {
+    transform: translateX(30px);
+    background-color: var(--dark);
+    box-shadow: none;
+  }
